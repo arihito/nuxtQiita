@@ -18,6 +18,27 @@ module.exports = {
   */
   loading: { color: '#3B8070' },
   /*
+  ** Modules
+  */
+  modules: [
+    '@nuxtjs/axios'
+  ],
+  /*
+  ** Modules option
+  */
+  axios: {
+
+  },
+  /*
+  ** Plugins
+  */
+  plugins: [
+    '~/plugins/axios.js'
+  ],
+  env: {
+    QIITA_TOKEN: process.env.QIITA_TOKEN
+  },
+  /*
   ** Build configuration
   */
   build: {
