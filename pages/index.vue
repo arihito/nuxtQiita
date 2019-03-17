@@ -8,6 +8,17 @@
       <h2 class="subtitle">
         Nuxt.js project
       </h2>
+      <ul class="qlists">
+        <li v-for="item in items" :key="item.id" class="qlist">
+          <h4 class="qtitle">
+            <span>{{ item.title }}</span>
+            <small>： {{ item.user.id }}</small>
+          </h4>
+          <small>{{ item.created_at }}</small>
+          <div class="qbody">{{ item.body.slice(0,200)}}....</div>
+          <p><a :href='item.url'>{{ item.url }}</a></p>
+        </li>
+      </ul>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -29,42 +40,10 @@ export default {
   components: {
     AppLogo
   },
-  async mounted() {
-    console.log(
-      JSON.stringify(await this.$axios.$get('https://qiita.com/api/v2/items?query=tag:nuxt.js'), true,'  ')
-    )
+  async asyncData({ app }) {
+    const items = await app.$axios.$get('https://qiita.com/api/v2/items?query=tag:nuxt.js')
+    return { items }
   }
 }
 </script>
-
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
 
