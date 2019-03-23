@@ -14,6 +14,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  background: linear-gradient(#05192e, #02061a );
 }
 
 *, *:before, *:after {
@@ -80,29 +81,42 @@ html {
 }
 .qlists {
   width: 600px;
-  padding-left: 0;
+  padding: 5px 0;
   list-style-type: none;
-  border-radius: 4px;
-  border: 1px solid #ccc;
   color: #35495e;
+  background-color: #c5e9de;
 }
 .qlist {
-  margin: 10px;
+  margin: 30px;
   padding: 10px 30px;
   text-align: left;
   border-radius: 2px;
   border: 1px solid #35495e;
+  background-color: #fff;
+  box-shadow: 0 0 3px #65594e;
 }
-.qtitle span {
-  font-size: 20px;
+.qtitle {
+  margin: 21px 0;
+  font-size: 28px;
+}
+a {
+  text-decoration: none;
+  color: #35495e;
 }
 .qbody {
   font-size: 14px;
   line-height: 2;
+  text-align: justify;
   border-top: 1px dotted #35495e;
-  border-bottom: 1px dotted #35495e;
-  margin: 10px 0;
+  margin: 10px 0 0;
   padding: 10px;
+}
+.qurl {
+  font-size: 10px;
+  color: #65594e;
+}
+.qimg {
+  float: left;
 }
 </style>
 

@@ -10,13 +10,10 @@
       </h2>
       <ul class="qlists">
         <li v-for="item in items" :key="item.id" class="qlist">
-          <h4 class="qtitle">
-            <span>{{ item.title }}</span>
-            <small>： {{ item.user.id }}</small>
-          </h4>
-          <small>{{ item.created_at }}</small>
+          <h4 class="qtitle"><nuxt-link :to="`/users/${item.user.id}`">{{ item.title }}</nuxt-link></h4>
+          <small>{{ item.user.id }} | {{ item.created_at.substr(0,10) }}</small>
           <div class="qbody">{{ item.body.slice(0,200)}}....</div>
-          <p><a :href='item.url'>{{ item.url }}</a></p>
+          <p class="qurl">参考Qiitaページ : <a :href="`${ item.url }`" target="_blank">{{ item.url }}</a></p>
         </li>
       </ul>
       <div class="links">
