@@ -99,6 +99,14 @@ html {
   margin: 21px 0;
   font-size: 28px;
 }
+.qtitlebox {
+  overflow: hidden;
+}
+.qtitlebox img {
+  float: left;
+  margin: 20px 10px 0 0;
+  width: 60px;
+}
 a {
   text-decoration: none;
   color: #35495e;
@@ -115,8 +123,18 @@ a {
   font-size: 10px;
   color: #65594e;
 }
+.qauthor {
+  font-size: 24px;
+  font-weight: normal;
+  margin-top: 36px;
+}
+.qdesc {
+  padding: 30px;
+  display: flex;
+}
 .qimg {
-  float: left;
+  border: 1px solid #35495e;
+  padding: 3px;
 }
 </style>
 

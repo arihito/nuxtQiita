@@ -1,14 +1,16 @@
 <template>
-  <section class='container'>
+  <section class="container">
     <div>
       <app-logo/>
       <h1 class="title">
         nuxt-qiita
       </h1>
-      <div class='qlist'>
-        <h2 class="title">{{ user.id }}</h2>
-        <img :src="user.profile_image_url" :alt='`${user.id}`' width="120" class="qimg">
-        <p class="qbody">{{ user.description || 'No description' }}</p>
+      <div class='qlists'>
+        <h2 class="qauthor">{{ user.id }}</h2>
+        <div class='qdesc'>
+          <img :src="user.profile_image_url" :alt='`${user.id}`' class="qimg">
+          <p class="qbody">{{ user.description || 'No description' }}</p>
+        </div>
         <p class="qurl"><nuxt-link to="/" class="button--green"><small>トップへ戻る</small></nuxt-link></p>
         <h3 class="qtitle">{{user.id}}さんの投稿一覧</h3>
       </div>
