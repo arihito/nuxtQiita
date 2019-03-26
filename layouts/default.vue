@@ -130,9 +130,12 @@ a {
 }
 .qdesc {
   padding: 30px;
-  display: flex;
+  overflow: hidden;
 }
 .qimg {
+  width: 100px;
+  margin-right: 20px;
+  float: left;
   border: 1px solid #35495e;
   padding: 3px;
 }
