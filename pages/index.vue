@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <div>
-      <app-logo/>
+      <app-logo class="qlogo" />
       <h1 class="title">
         nuxt-qiita
       </h1>

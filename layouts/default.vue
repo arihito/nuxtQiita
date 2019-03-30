@@ -1,8 +1,23 @@
 <template>
   <div>
+    <AppNavigation />
     <nuxt/>
+    <footer>
+      footer
+    </footer>
   </div>
 </template>
+
+<script>
+import AppNavigation from '~/components/AppNavigation.vue'
+
+export default {
+  components: {
+    AppNavigation
+  }
+}
+</script>
+
 
 <style>
 html {
@@ -29,6 +44,10 @@ html {
   color: #3b8070;
   text-decoration: none;
   padding: 10px 30px;
+}
+
+.qlogo {
+  margin-top: 100px;
 }
 
 .button--green:hover {
@@ -80,7 +99,7 @@ html {
   padding-top: 15px;
 }
 .qlists {
-  width: 600px;
+  width: 1000px;
   padding: 5px 0;
   list-style-type: none;
   color: #35495e;

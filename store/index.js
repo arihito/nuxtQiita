@@ -17,7 +17,7 @@ export default () =>
         state.items = items
       },
       setUser(state, { user }) {
-        store.users[user.id] = user
+        state.users[user.id] = user
       },
       setUserItems(state, { user, items }) {
         state.userItems[user.id] = items
