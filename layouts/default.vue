@@ -1,6 +1,10 @@
 <template>
   <div>
     <AppNavigation />
+    <div class='center'>
+      <App-logo />
+      <GrobalHeader />
+    </div>
     <nuxt/>
     <footer>
       footer
@@ -10,10 +14,14 @@
 
 <script>
 import AppNavigation from '~/components/AppNavigation.vue'
+import GrobalHeader from '~/components/GrobalHeader.vue'
+import AppLogo from '~/components/AppLogo.vue'
 
 export default {
   components: {
-    AppNavigation
+    AppLogo,
+    AppNavigation,
+    GrobalHeader
   }
 }
 </script>
@@ -78,6 +86,13 @@ html {
   text-align: center;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 80px;
+}
+
 .title {
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
   display: block;
@@ -93,6 +108,7 @@ html {
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .links {
@@ -118,6 +134,15 @@ html {
   margin: 21px 0;
   font-size: 28px;
 }
+.qtitle a {
+  text-decoration: none;
+  color: #35495e;
+}
+.qtitle a:hover {
+  color: #3b8070;
+  background: linear-gradient(transparent 60%, #ffff66 0%);
+  transition: all .5s ease;
+}
 .qtitlebox {
   overflow: hidden;
 }
@@ -125,10 +150,6 @@ html {
   float: left;
   margin: 20px 10px 0 0;
   width: 60px;
-}
-a {
-  text-decoration: none;
-  color: #35495e;
 }
 .qbody {
   font-size: 14px;
@@ -141,22 +162,6 @@ a {
 .qurl {
   font-size: 10px;
   color: #65594e;
-}
-.qauthor {
-  font-size: 24px;
-  font-weight: normal;
-  margin-top: 36px;
-}
-.qdesc {
-  padding: 30px;
-  overflow: hidden;
-}
-.qimg {
-  width: 100px;
-  margin-right: 20px;
-  float: left;
-  border: 1px solid #35495e;
-  padding: 3px;
 }
 </style>
 

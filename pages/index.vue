@@ -1,13 +1,6 @@
 <template>
   <section class="container">
     <div>
-      <app-logo class="qlogo" />
-      <h1 class="title">
-        nuxt-qiita
-      </h1>
-      <h2 class="subtitle">
-        Nuxt.js project
-      </h2>
       <ul class="qlists">
         <li v-for="item in items" :key="item.id" class="qlist">
           <div class='qtitlebox'>
@@ -20,27 +13,23 @@
         </li>
       </ul>
       <div class="links">
-        <a
+        <button
           href="https://nuxtjs.org/"
           target="_blank"
-          class="button--green">Documentation</a>
-        <a
+          class="button--green">Documentation</button>
+        <button
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
-          class="button--grey">GitHub</a>
+          class="button--grey">GitHub</button>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
 import { mapGetters } from 'vuex'
 
 export default {
-  components: {
-    AppLogo
-  },
   async asyncData({ store }) {
     if (store.getters['items'].length) {
       return

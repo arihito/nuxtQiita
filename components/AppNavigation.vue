@@ -32,6 +32,7 @@
   padding-top: 14px;
   font-size: 12px;
   height: 46px;
+  text-decoration: none;
 }
 .gnav li a:hover {
   background-color: #41B883;
