@@ -67,8 +67,9 @@ html {
   color: #fff;
   font-weight: bold;
   text-decoration: none;
-  padding: 10px 30px;
+  padding: 15px 100px;
   margin-left: 15px;
+  box-shadow: 0 0 10px #283747;
 }
 
 .button--grey:hover {

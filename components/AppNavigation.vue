@@ -2,10 +2,10 @@
   <div class='wrap'>
     <ul class="gnav">
       <li><nuxt-link to="/">トップ</nuxt-link></li>
-      <li><nuxt-link to="/login">ログイン</nuxt-link></li>
       <li><nuxt-link to="/child">会員ページ</nuxt-link></li>
       <li><a href="https://ja.nuxtjs.org/guide/" target="_blank">Nuxt.js日本公式</a></li>
       <li><a href="https://github.com/nuxt/nuxt.js" target="_blank">Nuxt.js GitHub</a></li>
+      <li><nuxt-link to="/login" class="gnav-login">ログイン</nuxt-link></li>
     </ul>
   </div>
 </template>
@@ -53,5 +53,9 @@
 }
 .gnav li a[href^=http]::after:hover {
   background-position: 0 -10px;
+}
+.gnav li .gnav-login {
+  border: 1px solid #4c637c;
+  border-radius: 5px;
 }
 </style>

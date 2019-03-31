@@ -1,6 +1,7 @@
 <template>
   <main class="container">
     <section class="contents">
+      <h2 class="stitle">トップページ</h2>
       <ul class="qlists">
         <li v-for="item in items" :key="item.id" class="qlist">
           <div class='qtitlebox'>
