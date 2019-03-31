@@ -19,6 +19,14 @@ module.exports = {
   */
   loading: { color: '#3B8070' },
   /*
+  ** Router
+  */
+  router: {
+    middleware: [
+      'auth'
+    ]
+  },
+  /*
   ** Modules
   */
   modules: [

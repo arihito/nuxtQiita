@@ -1,23 +1,13 @@
 <template>
-  <section class="container">
-    <div>
-      <app-logo class="qlogo" />
-      <GrobalHeader />
-      <p class="qurl"><nuxt-link to="/" class="button--green"><small>トップへ戻る</small></nuxt-link></p>
-    </div>
-  </section>
+  <main class="container">
+    <section class='contents'>
+      <h2 class="stitle">会員専用ページ</h2>
+    </section>
+  </main>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
-import GrobalHeader from '~/components/GrobalHeader.vue'
-import { mapGetters } from 'vuex'
-
 export default {
-  components: {
-    AppLogo,
-    GrobalHeader
-  },
   layout: 'single'
 }
 </script>

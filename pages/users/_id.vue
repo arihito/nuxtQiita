@@ -1,6 +1,6 @@
 <template>
-  <section class="container">
-    <div>
+  <main class="container">
+    <section class="contents">
       <div class='qlists'>
         <div class='qdesc'>
           <img :src="user.profile_image_url" :alt='`${user.id}`' class="qimg">
@@ -16,8 +16,8 @@
           <p class="qurl">参考Qiitaページ : <a :href="`${ item.url }`" target="_blank">{{ item.url }}</a></p>
         </li>
       </ul>
-    </div>
-  </section>
+    </section>
+  </main>
 </template>
 
 <script>
@@ -64,6 +64,7 @@ export default {
 .qdesc {
   padding: 30px 30px 0;
   overflow: hidden;
+  margin-bottom: -20px;
 }
 .qimg {
   width: 100px;

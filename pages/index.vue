@@ -1,6 +1,6 @@
 <template>
-  <section class="container">
-    <div>
+  <main class="container">
+    <section class="contents">
       <ul class="qlists">
         <li v-for="item in items" :key="item.id" class="qlist">
           <div class='qtitlebox'>
@@ -12,18 +12,8 @@
           <p class="qurl">参考Qiitaページ : <a :href="`${ item.url }`" target="_blank">{{ item.url }}</a></p>
         </li>
       </ul>
-      <div class="links">
-        <button
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</button>
-        <button
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</button>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 </template>
 
 <script>
