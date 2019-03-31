@@ -178,5 +178,10 @@ html {
   font-size: 10px;
   color: #65594e;
 }
+.qp {
+  color: #aff1e2;
+  line-height: 2;
+  margin: 20px 0;
+}
 </style>
 

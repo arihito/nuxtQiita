@@ -42,7 +42,8 @@ module.exports = {
   ** Plugins
   */
   plugins: [
-    '~/plugins/axios.js'
+    '~/plugins/axios',
+    '~/plugins/logger'
   ],
   env: {
     QIITA_TOKEN: process.env.QIITA_TOKEN
